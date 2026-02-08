@@ -12,15 +12,13 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-sky-50">
-      <h1 className="text-3xl font-semibold mb-4">
+      <h1 className="text-3xl font-semibold mb-4 text-black">
         Welcome, {session.user.name}
       </h1>
 
       <p className="mb-6 text-gray-600">
         Session expires automatically after 24 hours.
       </p>
-
-      <LogoutButton />
     </div>
   );
 }
