@@ -45,39 +45,42 @@ export default function BkashSellsPage() {
   return (
     <div>
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-3 bg-gradient-to-r from-violet-500 to-purple-500 rounded-xl">
-            <Smartphone className="w-6 h-6 text-white" />
+      <div className="flex justify-between items-center">
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-gradient-to-r from-violet-500 to-purple-500 rounded-xl">
+              <Smartphone className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-sky-900">Bkash Sells</h1>
+              <p className="text-sky-600">Track your mobile payment sales</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-bold text-sky-900">Bkash Sells</h1>
-            <p className="text-sky-600">Track your mobile payment sales</p>
+
+          <div className="flex items-center gap-2 text-sky-700">
+            <Calendar className="w-5 h-5" />
+            <span>{formattedDate}</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-sky-700">
-          <Calendar className="w-5 h-5" />
-          <span>{formattedDate}</span>
-        </div>
-      </div>
+        {/* Summary Card */}
+        <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl  border border-sky-100 p-6 mb-8">
+          <div className="flex items-center justify-between gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
+              <p className="text-sky-600 text-sm">Total sales for {today}</p>
+              <div className="text-sky-600 text-sm">{data.length} transactions</div>
+            </div>
+            <div className="text-right">
+              <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
 
-      {/* Summary Card */}
-      <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl shadow-xl border border-sky-100 p-6 mb-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
-            <p className="text-sky-600 text-sm">Total sales for {today}</p>
-          </div>
-          <div className="text-right">
-            <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
-            <div className="text-sky-600 text-sm">{data.length} transactions</div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Input Card */}
-      <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl shadow-xl border border-violet-100 p-6 mb-8">
+      <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl  border border-violet-100 p-6 mb-8">
         <h2 className="text-xl font-bold text-violet-900 mb-6">Add New Sale</h2>
 
         <div className="flex flex-col lg:flex-row gap-4 mb-6">
@@ -119,7 +122,7 @@ export default function BkashSellsPage() {
 
 
       {/* Transactions Table */}
-      <div className="rounded-2xl shadow-xl border border-sky-100 overflow-hidden">
+      <div className="rounded-2xl  border border-sky-100 overflow-hidden">
         <div className="bg-gradient-to-r from-violet-500 to-purple-500 p-4">
           <h3 className="text-lg font-semibold text-white">Recent Transactions</h3>
         </div>

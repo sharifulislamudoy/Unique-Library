@@ -45,39 +45,41 @@ export default function ComputerSellsPage() {
   return (
     <div>
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl">
-            <Monitor className="w-6 h-6 text-white" />
+      <div className="flex justify-between items-center">
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl">
+              <Monitor className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-sky-900">Computer Sells</h1>
+              <p className="text-sky-600">Track your computer shop sales</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-bold text-sky-900">Computer Sells</h1>
-            <p className="text-sky-600">Track your computer shop sales</p>
+
+          <div className="flex items-center gap-2 text-sky-700">
+            <Calendar className="w-5 h-5" />
+            <span>{formattedDate}</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-sky-700">
-          <Calendar className="w-5 h-5" />
-          <span>{formattedDate}</span>
-        </div>
-      </div>
-
-            {/* Summary Card */}
-      <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl shadow-xl border border-sky-100 p-6 mb-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
-            <p className="text-sky-600 text-sm">Total sales for {today}</p>
-          </div>
-          <div className="text-right">
-            <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
-            <div className="text-sky-600 text-sm">{data.length} transactions</div>
+        {/* Summary Card */}
+        <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl  border border-sky-100 p-6 mb-8">
+          <div className="flex items-center justify-between gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
+              <p className="text-sky-600 text-sm">Total sales for {today}</p>
+              <div className="text-sky-600 text-sm">{data.length} transactions</div>
+            </div>
+            <div className="text-right">
+              <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Input Card */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl border border-blue-100 p-6 mb-8">
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl  border border-blue-100 p-6 mb-8">
         <h2 className="text-xl font-bold text-blue-900 mb-6">Add New Sale</h2>
 
         <div className="flex flex-col lg:flex-row gap-4 mb-6">
@@ -119,7 +121,7 @@ export default function ComputerSellsPage() {
 
 
       {/* Transactions Table */}
-      <div className="rounded-2xl shadow-xl border border-sky-100 overflow-hidden">
+      <div className="rounded-2xl  border border-sky-100 overflow-hidden">
         <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-4">
           <h3 className="text-lg font-semibold text-white">Recent Transactions</h3>
         </div>

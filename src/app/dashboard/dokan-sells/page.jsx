@@ -45,39 +45,42 @@ export default function DokanSellsPage() {
   return (
     <div>
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-3 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl">
-            <TrendingUp className="w-6 h-6 text-white" />
+      <div className="flex justify-between items-center">
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl">
+              <TrendingUp className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-sky-900">Dokan Sells</h1>
+              <p className="text-sky-600">Track your daily shop sales</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-bold text-sky-900">Dokan Sells</h1>
-            <p className="text-sky-600">Track your daily shop sales</p>
+
+          <div className="flex items-center gap-2 text-sky-700">
+            <Calendar className="w-5 h-5" />
+            <span>{formattedDate}</span>
           </div>
         </div>
-
-        <div className="flex items-center gap-2 text-sky-700">
-          <Calendar className="w-5 h-5" />
-          <span>{formattedDate}</span>
+        {/* Summary Card */}
+        <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-100 p-6 mb-8">
+          <div className="flex items-center justify-between gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
+              <p className="text-sky-600 text-sm">Total sales for {today}</p>
+              <div className="text-sky-600 text-sm">{data.length} transactions</div>
+            </div>
+            <div className="text-right">
+              <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
+            </div>
+          </div>
         </div>
       </div>
 
-            {/* Summary Card */}
-      <div className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl shadow-xl border border-sky-100 p-6 mb-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-sky-900">Today's Summary</h3>
-            <p className="text-sky-600 text-sm">Total sales for {today}</p>
-          </div>
-          <div className="text-right">
-            <div className="text-3xl font-bold text-sky-900">৳ {totalToday}</div>
-            <div className="text-sky-600 text-sm">{data.length} transactions</div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Input Card */}
-      <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl shadow-xl border border-emerald-100 p-6 mb-8">
+      <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl  border border-emerald-100 p-6 mb-8">
         <h2 className="text-xl font-bold text-emerald-900 mb-6">Add New Sale</h2>
 
         <div className="flex flex-col lg:flex-row gap-4 mb-6">
@@ -119,7 +122,7 @@ export default function DokanSellsPage() {
 
 
       {/* Transactions Table */}
-      <div className="rounded-2xl shadow-xl border border-sky-100 overflow-hidden">
+      <div className="rounded-2xl  border border-sky-100 overflow-hidden">
         <div className="bg-gradient-to-r from-sky-500 to-blue-500 p-4">
           <h3 className="text-lg font-semibold text-white">Recent Transactions</h3>
         </div>
