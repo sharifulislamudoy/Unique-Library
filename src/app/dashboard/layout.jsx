@@ -55,7 +55,7 @@ export default function DashboardLayout({ children }) {
 
           {/* Main Content */}
           <main className="flex-1">
-            <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-6 lg:p-8">
+            <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-6 py-10">
               {children}
             </div>
           </main>
